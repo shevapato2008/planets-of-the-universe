@@ -1,22 +1,26 @@
  <!DOCTYPE html>
 <html lang="en-ca">
-	<head>
-		<meta charset="utf-8">
-		<title>Planets of the Universe</title>
-		<link rel="stylesheet" href="{{site.baseurl}}/css/common.css">
-	</head>
-	<body>
 
-		<header>
-			<h1>Planets of the University</h1>
-			{% include nav.html %}
-		</header>
+<head>
+	<meta charset="utf-8">
+	<title>Planets of the Universe</title>
+	<link rel="stylesheet" href="{{site.baseurl}}/css/common.css">
+</head>
 
-		{{content}}
-		
-		<footer>
-			{% include nav.html %}
-			<p>&copy; 2017 Planets of the Universe</p>
-		</footer>
-	</body>
+<body>
+
+<header>
+	<h1>Planets of the University</h1>
+	{% include nav.html navclass='nav-top' %}
+</header>
+
+{{content}}
+
+<footer>
+	{% include nav.html navclass='nav-bottom' %}
+	<p>&copy; 2017 Planets of the Universe</p>
+</footer>
+	
+</body>
+
 </html>
