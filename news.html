@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<h1>News</h1>
+<h1>Planetary News</h1>
 
 <ul>
-	{% for news in site.posts %}
+	{% for news in site.categories.news %}
 		<li>
 			<a href="">{{news.title}}</a>
 			<p>{{news.meta}}</p>
@@ -13,3 +13,16 @@ layout: default
 		</li>
 	{% endfor %}
 </ul>
+
+<h1>Recently Discovered Planets</h1>
+
+<ul>
+	{% for news in site.categories.recently-discovered limit: 2 %}
+		<li>
+			<a href="">{{news.title}}</a>
+			<p>{{news.meta}}</p>
+			<p>Source: {{news.source}}</p>
+		</li>
+	{% endfor %}
+</ul>
+
